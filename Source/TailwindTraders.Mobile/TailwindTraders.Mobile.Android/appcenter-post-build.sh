@@ -46,6 +46,7 @@ find $APPCENTER_SOURCE_DIRECTORY/Source/packages
 ls $APPCENTER_SOURCE_DIRECTORY
 ls $APPCENTER_SOURCE_DIRECTORY/packages
 ls $APPCENTER_SOURCE_DIRECTORY/Source
+ls $APPCENTER_SOURCE_DIRECTORY/tools
 find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -exec export UI_TEST_TOOLS_DIR=. \;
 find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -print
 find $UI_TEST_TOOLS_DIR -name 'test-cloud.exe' -exec echo{} \; 
