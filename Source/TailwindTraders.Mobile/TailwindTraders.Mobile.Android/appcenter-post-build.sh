@@ -42,14 +42,7 @@ DEFAULT_DEVICES="7c5a701f"
 UI_TEST_TOOLS_DIR=$APPCENTER_SOURCE_DIRECTORY/Source/TailwindTraders.Mobile/packages/Xamarin.UITest.*/tools/
 
 echo "Debug output: Finding test-cloud.exe"
-find $APPCENTER_SOURCE_DIRECTORY/Source/packages
-ls $APPCENTER_SOURCE_DIRECTORY
-ls $APPCENTER_SOURCE_DIRECTORY/packages
-ls $APPCENTER_SOURCE_DIRECTORY/Source
-ls $APPCENTER_SOURCE_DIRECTORY/tools
-find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -exec export UI_TEST_TOOLS_DIR=. \;
 find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -print
-find $UI_TEST_TOOLS_DIR -name 'test-cloud.exe' -exec echo{} \; 
 
 if [ -z "$APPCENTER_TOKEN" ]; then
 	echo "ERROR! AppCenter API token is not set. Exiting..."
@@ -67,6 +60,8 @@ echo "UI Test Tools Dir: $UI_TEST_TOOLS_DIR"
 
 echo "### Restoring UITest NuGet packages"
 msbuild $UITEST_PROJECT_PATH/$UITEST_CSPROJ_NAME /t:restore
+
+cat /Users/runner/.config/NuGet/NuGet.Config
 
 echo "### Compiling UITest project"
 msbuild $UITEST_PROJECT_PATH/$UITEST_CSPROJ_NAME /t:build /p:Configuration=Release
