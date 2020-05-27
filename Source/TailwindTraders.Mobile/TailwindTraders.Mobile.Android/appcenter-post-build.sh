@@ -39,10 +39,7 @@ UITEST_CSPROJ_NAME="TailwindTraders.UITests.csproj"
 APK_PATH="$APPCENTER_OUTPUT_DIRECTORY/com.microsoft.tailwindtraders.apk"
 
 DEFAULT_DEVICES="7c5a701f"
-export UI_TEST_TOOLS_DIR=$(find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -exec echo{} \;)
-
-echo "Debug output: Finding test-cloud.exe"
-find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -print
+UI_TEST_TOOLS_DIR="/Users/vsts/.nuget/packages/xamarin.uitest/2.2.7/tools"
 
 if [ -z "$APPCENTER_TOKEN" ]; then
 	echo "ERROR! AppCenter API token is not set. Exiting..."
