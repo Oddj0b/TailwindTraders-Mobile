@@ -47,7 +47,7 @@ ls $APPCENTER_SOURCE_DIRECTORY
 ls $APPCENTER_SOURCE_DIRECTORY/packages
 ls $APPCENTER_SOURCE_DIRECTORY/Source
 find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -exec export UI_TEST_TOOLS_DIR=. \;
-find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -print \;
+find $APPCENTER_SOURCE_DIRECTORY -name 'test-cloud.exe' -print
 find $UI_TEST_TOOLS_DIR -name 'test-cloud.exe' -exec echo{} \; 
 
 if [ -z "$APPCENTER_TOKEN" ]; then
