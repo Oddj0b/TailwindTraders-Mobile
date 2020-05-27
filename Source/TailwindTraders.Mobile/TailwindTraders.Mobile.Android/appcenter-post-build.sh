@@ -42,7 +42,8 @@ DEFAULT_DEVICES="7c5a701f"
 UI_TEST_TOOLS_DIR=$APPCENTER_SOURCE_DIRECTORY/packages/Xamarin.UITest.*/tools
 
 echo "Debug output: Finding test-cloud.exe"
-ls /Users/vsts/.nuget/packages/xamarin.uitest/2.2.7/tools
+ls /Users/vsts/.nuget/packages/xamarin.uitest/
+ls /Users/vsts/.nuget/packages/xamarin.uitest/*/tools
 find $UI_TEST_TOOLS_DIR -name 'test-cloud.exe' -exec echo{} \; 
 
 if [ -z "$APPCENTER_TOKEN" ]; then
